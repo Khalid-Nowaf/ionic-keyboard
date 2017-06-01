@@ -9,7 +9,7 @@
   <ion-navbar>
     <ion-title>chat</ion-title>
   </ion-navbar>
-
+  <dir-lang> </dir-lang>
 </ion-header>
 
 
@@ -18,22 +18,22 @@
   <ion-list>
     <ion-item *ngFor="let msg of msgs"> {{ msg }} </ion-item>
   </ion-list>
-  
+
 </ion-content>
 
-<ion-footer >
- <!--<ion-toolbar >-->
-   <ion-grid>
-     <ion-row>
-    <ion-col col-10>
-    <ion-input [(ngModel)]='msg' (focus)="content.scrollToBottom()" > </ion-input>
-    </ion-col>
-     <ion-col col-2>
-    <button ion-button [disabled]="msg == ''" (click)='send()' icon-only clear >
-       <ion-icon  name="send"></ion-icon>
+<ion-footer>
+  <!--<ion-toolbar >-->
+  <ion-grid>
+    <ion-row>
+      <ion-col col-10>
+        <ion-input [(ngModel)]='msg' (focus)="content.scrollToBottom()"> </ion-input>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-button [disabled]="msg == ''" (click)='send()' icon-only clear>
+       <ion-icon class="send" name="send"></ion-icon>
     </button>
- </ion-col>
- </ion-row>
-   </ion-grid>
-<!--</ion-toolbar>-->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--</ion-toolbar>-->
 </ion-footer>

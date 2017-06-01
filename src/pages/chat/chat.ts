@@ -1,5 +1,5 @@
-import { Component,ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams,Content} from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Content } from 'ionic-angular';
 
 /**
  * Generated class for the ChatPage page.
@@ -13,10 +13,10 @@ import { IonicPage, NavController, NavParams,Content} from 'ionic-angular';
   templateUrl: 'chat.html',
 })
 
- 
+
 export class ChatPage {
- @ViewChild(Content) content: Content;
-  msg:string;
+  @ViewChild(Content) content: Content;
+  msg: string;
   msgs: string[];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.msg = '';
@@ -29,8 +29,8 @@ export class ChatPage {
 
   send() {
     this.msgs.push(this.msg);
-    this.msg ='';
-   setTimeout(()=> this.scrollDown(),0);
+    this.msg = '';
+    setTimeout(() => this.scrollDown(), 0);
 
   }
 
