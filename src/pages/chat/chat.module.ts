@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ChatPage } from './chat';
-import { DirLangComponent } from '../../components/dir-lang/dir-lang';
+import { DirLangComponentModule } from '../../components/dir-lang/dir-lang.module';
 
 
 @NgModule({
   declarations: [
     ChatPage,
-    DirLangComponent
+    // DirLangComponent
   ],
   imports: [
     IonicPageModule.forChild(ChatPage),
+    DirLangComponentModule
   ],
   exports: [
     ChatPage
